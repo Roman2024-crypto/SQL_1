@@ -16,6 +16,10 @@ SELECT DISTINCT district FROM address a WHERE district LIKE 'K%a' AND district N
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно** и стоимость которых превышает 10.00.
 
 ### Решение 2
+```sql
+SELECT * FROM payment p WHERE amount > 10 AND date(payment_date) BETWEEN '2005-06-15' AND '2005-06-18' ORDER BY  payment_date, amount ;
+```
+![image](https://github.com/user-attachments/assets/45988105-2143-4a4c-aa79-e84252dd26e4)
 
 
 ### Задание 3
