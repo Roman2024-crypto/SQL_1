@@ -27,6 +27,10 @@ SELECT * FROM payment p WHERE amount > 10 AND date(payment_date) BETWEEN '2005-0
 Получите последние пять аренд фильмов.
 
 ### Решение 3
+```sql
+SELECT * FROM rental r ORDER BY rental_date DESC LIMIT 5;
+```
+![image](https://github.com/user-attachments/assets/45c6be7d-d353-44aa-87ce-5e3d7f223a78)
 
 
 ### Задание 4
@@ -38,4 +42,7 @@ SELECT * FROM payment p WHERE amount > 10 AND date(payment_date) BETWEEN '2005-0
 - замените буквы 'll' в именах на 'pp'.
 
 ### Решение 4
-
+```sql
+SELECT replace(lower(first_name), 'll', 'pp'), lower(last_name), email FROM customer c WHERE first_name = 'KELLY' OR first_name = 'WILLIE';
+```
+![image](https://github.com/user-attachments/assets/acbf0265-f76f-4601-9849-aefdcabdee81)
